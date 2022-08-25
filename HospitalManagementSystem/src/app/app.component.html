@@ -1,0 +1,19 @@
+<input type="text" placeholder="Enter Name" [(ngModel)]="name">
+<input type="text" placeholder="Enter value" [(ngModel)]="completed">
+<input type="button" value="Submit" (click)="insert()">
+<input type="button" value="Remove" (click)="remove()">
+
+<table>
+  <tr class="tableRow">
+    <td>
+      Name
+    </td>
+    <td>
+      Complete Percentage.
+    </td>
+  </tr>
+  <tr *ngFor="let i of details" class="tableRow">
+    <td class="tableRow">{{i.name}}</td>
+    <td> <progress style="width: 200px; height:30px" value={{i.completed}} max="100"></progress> </td>
+  </tr>
+</table>
